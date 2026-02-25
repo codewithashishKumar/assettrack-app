@@ -4,14 +4,17 @@ import "../styles/Sidebar.css";
 function Sidebar({ activeSection, setActiveSection }) {
     const [isOpen, setIsOpen] = useState(false);
 
+    const sections = ["section1", "section2", "section3"];
+
     const handleClick = (section) => {
         setActiveSection(section);
         setIsOpen(false);
     };
 
+    const activeIndex = sections.indexOf(activeSection);
+
     return (
         <>
-            {/* Mobile Header */}
             <div className="mobile-header">
                 <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
                     ☰
@@ -23,27 +26,23 @@ function Sidebar({ activeSection, setActiveSection }) {
                 <h2 className="desktop-title">Expense Tracker</h2>
 
                 <nav>
-                    <ul>
-                        <li
-                            className={activeSection === "section1" ? "active" : ""}
-                            onClick={() => handleClick("section1")}
-                        >
-                            Section 1
-                        </li>
+                    <ul className="nav-list">
+                        <div
+                            className="active-indicator"
+                            style={{
+                                transform: `translateY(${activeIndex * 58}px)`
+                            }}
+                        />
 
-                        <li
-                            className={activeSection === "section2" ? "active" : ""}
-                            onClick={() => handleClick("section2")}
-                        >
-                            Section 2
-                        </li>
-
-                        <li
-                            className={activeSection === "section3" ? "active" : ""}
-                            onClick={() => handleClick("section3")}
-                        >
-                            Section 3
-                        </li>
+                        {sections.map((section, index) => (
+                            <li
+                                key={section}
+                                className={activeSection === section ? "active" : ""}
+                                onClick={() => handleClick(section)}
+                            >
+                                Section {index + 1}
+                            </li>
+                        ))}
                     </ul>
                 </nav>
             </aside>
