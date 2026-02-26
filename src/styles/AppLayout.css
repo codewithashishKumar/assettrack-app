@@ -6,7 +6,7 @@
 .main-content {
     margin-left: 260px;
     width: calc(100% - 260px);
-    padding: 24px;
+    /* padding: 24px; */
     overflow-y: auto;
     height: 100vh;
     background-color: #F3E7D3;
@@ -17,6 +17,12 @@
     .main-content {
         margin-left: 240px;
         width: calc(100% - 240px);
+    }
+
+    .section1-container,
+    .section2-container,
+    .section3-container {
+        min-height: calc(100vh - 60px);
     }
 }
 
@@ -38,7 +44,7 @@
     .main-content {
         margin-left: 0;
         width: 100%;
-        padding-top: 80px;
+        padding-top: 60px;
     }
 
 }

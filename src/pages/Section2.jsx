@@ -1,10 +1,62 @@
-function Section2() {
+import "../styles/Section2.css";
+
+function Section2({ expenses, setExpenses }) {
+    const handleDelete = (id) => {
+        const filteredExpenses = expenses.filter((item) => item.id !== id);
+        setExpenses(filteredExpenses);
+    };
+
+    const totalSpent = expenses.reduce(
+        (total, expense) => total + expense.amount,
+        0
+    );
+
     return (
-        <div>
-            <h1>Section 2</h1>
-            {[...Array(20)].map((_, i) => (
-                <p key={i}>Section 2 Content {i + 1}</p>
-            ))}
+        <div className="section2-container">
+            <div className="section2-card">
+                <div className="section2Header">
+                    <h1 className="section2-title">Expense Overview</h1>
+                </div>
+
+
+                {expenses.length === 0 ? (
+                    <div className="empty-state">
+                        No expenses added yet.
+                    </div>
+                ) : (
+                    <>
+                        <table className="modern-table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Amount</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {expenses.map((expense) => (
+                                    <tr key={expense.id}>
+                                        <td>{expense.title}</td>
+                                        <td>₹ {expense.amount}</td>
+                                        <td>
+                                            <button
+                                                className="delete-btn"
+                                                onClick={() => handleDelete(expense.id)}
+                                            >
+                                                Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+
+                        <div className="total-box">
+                            Total Spent: ₹ {totalSpent}
+                        </div>
+                    </>
+                )}
+            </div>
         </div>
     );
 }

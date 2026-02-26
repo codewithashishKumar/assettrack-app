@@ -1,0 +1,139 @@
+/* Base Background */
+.section1-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg,
+            #F3E7D3 0%,
+            #E8D8C3 40%,
+            #D9C2A3 100%);
+    padding: 20px;
+}
+
+/* Card */
+.section1-card {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.budget-summary {
+    display: flex;
+    justify-content: space-between;
+    background: #fffaf3;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.budget-summary p {
+    font-size: 14px;
+    color: #8a7963;
+}
+
+.budget-summary h3 {
+    margin-top: 5px;
+    font-size: 20px;
+    color: #4b3f2f;
+}
+
+.danger {
+    color: #c62828;
+}
+
+/* Title */
+.section1-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #4b3f2f;
+}
+
+/* Budget Box */
+.budget-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.budget-box label {
+    font-size: 14px;
+    color: #6b5c48;
+}
+
+.budget-box input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #d6c2a8;
+    font-size: 16px;
+    background-color: #fffaf3;
+}
+
+/* Form */
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Floating Input */
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 12px;
+    border-radius: 10px;
+    border: 1px solid #d6c2a8;
+    background-color: #fffaf3;
+    outline: none;
+    font-size: 16px;
+    color: #4b3f2f;
+}
+
+.input-group label {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    font-size: 14px;
+    color: #8a7963;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+/* Floating animation */
+.input-group input:focus+label,
+.input-group input:not(:placeholder-shown)+label {
+    top: -8px;
+    left: 10px;
+    font-size: 12px;
+    background: #F3E7D3;
+    padding: 0 6px;
+    border-radius: 6px;
+}
+
+/* Button */
+.gradient-btn {
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+    background: linear-gradient(90deg, #c9a27e, #b6895b);
+    color: white;
+    transition: 0.3s ease;
+}
+
+.gradient-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(182, 137, 91, 0.3);
+}

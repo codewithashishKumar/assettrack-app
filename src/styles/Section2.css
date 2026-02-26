@@ -1,0 +1,112 @@
+.section2-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+            #F3E7D3 0%,
+            #E8D8C3 50%,
+            #D9C2A3 100%);
+
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.section2-card {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+    padding: 40px;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.section2Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section2-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #4b3f2f;
+}
+
+/* Table */
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modern-table thead {
+    background: linear-gradient(90deg, #5A463B, #5A463B);
+    color: white;
+}
+
+.modern-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.modern-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e0d0b8;
+    color: #4b3f2f;
+}
+
+.modern-table tbody tr {
+    transition: 0.5s ease;
+}
+
+.modern-table tbody tr:hover {
+    background: linear-gradient(90deg, #c9a27e, #b6895b);
+    color: #fff;
+
+}
+
+.modern-table tbody tr:hover td {
+    color: #fff;
+}
+
+/* Delete Button */
+.delete-btn {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+
+    background: #000;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.delete-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(198, 40, 40, 0.3);
+}
+
+/* Total Box */
+.total-box {
+    margin-top: 25px;
+    padding: 15px;
+    background: #fffaf3;
+    border-radius: 12px;
+    font-weight: 600;
+    text-align: right;
+    color: #4b3f2f;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Empty State */
+.empty-state {
+    padding: 30px;
+    text-align: center;
+    background: #fffaf3;
+    border-radius: 12px;
+    color: #6b5c48;
+}
