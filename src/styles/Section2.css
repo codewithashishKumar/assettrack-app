@@ -1,5 +1,6 @@
 .section2-container {
     min-height: 100vh;
+    width: 100%;
     background: linear-gradient(135deg,
             #F3E7D3 0%,
             #E8D8C3 50%,
@@ -12,7 +13,7 @@
 
 .section2-card {
     width: 100%;
-    max-width: 900px;
+    /* max-width: 900px; */
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
 

@@ -29,7 +29,7 @@ function Section3({ expenses, budget }) {
         <div className="section3-container">
             <div className="section3-card">
 
-                <h1 className="section3-title">📊 Analytics Dashboard</h1>
+                <h1 className="section3-title"> Analytics Dashboard</h1>
 
                 {/* Summary Cards */}
                 <div className="summary-grid">
